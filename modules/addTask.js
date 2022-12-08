@@ -55,10 +55,10 @@ const createTask = ({ value, dateFormat, complete, id }) => {
   taskContent.appendChild(titleTask);
 
   const dateElement = document.createElement("span");
+  
   task.appendChild(taskContent);
-
   task.appendChild(dateElement);
-  task.appendChild(deleteBtn());
+  task.appendChild(deleteBtn(id));
   return task;
 };
 
