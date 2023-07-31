@@ -11,9 +11,13 @@ const addTask = (evento) => {
   const calendar = document.querySelector("[data-from-date]");
   const value = input.value;
   const date = calendar.value;
-  const dateFormat = moment(date).format("DD/MM/YYYY");
-  if (value === "" || date === "") {
+  let dateFormat = moment(date).format("DD/MM/YYYY");
+  if (value === "") {
     return;
+  }
+
+  if (date === "") {
+    dateFormat = moment(Date()).format("DD/MM/YYYY");
   }
 
   input.value = "";
@@ -55,7 +59,7 @@ const createTask = ({ value, dateFormat, complete, id }) => {
   taskContent.appendChild(titleTask);
 
   const dateElement = document.createElement("span");
-  
+
   task.appendChild(taskContent);
   task.appendChild(dateElement);
   task.appendChild(deleteBtn(id));
