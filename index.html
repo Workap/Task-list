@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Dosis&family=Open+Sans&family=Parisienne&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="test.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       rel="stylesheet"
@@ -36,7 +37,14 @@
               maxlength="60"
               required
             />
-            <input type="date" data-from-date placeholder="DD/MM/AAAA" />
+            <div>
+              <input
+                class="form-date__input"
+                type="date"
+                data-from-date
+                placeholder="DD/MM/AAAA"
+              />
+            </div>
             <button type="submit" class="btnCreate" data-from-btn>
               Agregar <i class="fas fa-plus-circle"></i>
             </button>
